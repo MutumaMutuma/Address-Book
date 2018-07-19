@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <link rel="shortcut icon" href="Images/Address-Book-icon.png">
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Address Book</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Address book</title>
   </head>
   <body>
-<div class="container">
-  <div class="card">
-   <h1><img src="https://cdn.pixabay.com/photo/2017/01/13/01/22/pin-1976106_960_720.png" alt="10px" width="100px" height="100px" >ADDRESS BOOK</h1></span>
-  <h2>Add a contact</h2>
-  <div class="row">
-    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
-      <form class="myAddress" action="index.html" method="post">
-        <div class="form-group">
-          <label for="new-first-name">First name</label>
-          <input type="text" class="form-control" id="new-first-name">
-        </div>
-        <div class="form-group">
-          <label for="new-last-name">Last name</label>
-          <input type="text" class="form-control" id="new-last-name">
-        </div>
-        <div id="new-addresses">
+    <div class="container">
+      <h1>Address book</h1>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <h2>Add a contact:</h2>
+          <form id="new-contact">
+            <div class="form-group">
+              <label for="new-first-name">First name</label>
+              <input type="text" class="form-control" id="new-first-name">
+            </div>
+            <div class="form-group">
+              <label for="new-last-name">Last name</label>
+              <input type="text" class="form-control" id="new-last-name">
+            </div>
+
+            <div id="new-addresses">
               <div class="new-address">
                 <div class="form-group">
                   <label for="new-street">Street</label>
@@ -39,16 +46,20 @@
                 </div>
               </div>
             </div>
-        <span class="btn btn-primary" id="add-address">Another address</span>
-        <button type="submit" class="btn">Add</button>
-      </form>
-      <h2>Contacts:</h2>
+
+            <span class="btn btn-primary" id="add-address">Another address</span>
+
+            <button type="submit" class="btn">Add</button>
+          </form>
+
+          <h2>Contacts:</h2>
           <ul id="contacts">
 
           </ul>
-    </div>
-    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
-      <div id="show-contact">
+        </div>
+
+        <div class="col-md-6">
+          <div id="show-contact">
             <h2></h2>
             <p>First name: <span class="first-name"></span></p>
             <p>Last name: <span class="last-name"></span></p>
@@ -57,11 +68,9 @@
 
             </ul>
           </div>
+        </div>
+
+      </div>
     </div>
-  </div>
-  </div>
-</div>
-<!--SCRIPTS  -->
-<script src="js/scripts.js"></script>
   </body>
 </html>
